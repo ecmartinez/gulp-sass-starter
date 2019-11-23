@@ -2,12 +2,12 @@ const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-
 const babel = require('gulp-babel');
 const concatenate = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
 
 const origin = 'src';
-const destination = 'build';
+const destination = 'app';
 
 sass.compiler = require('node-sass');
 
@@ -29,6 +29,10 @@ function css(cb) {
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
+		.pipe(autoprefixer({
+			overrideBrowserslist: ['last 2 versions'],
+			cascade: false
+		})
 		.pipe(dest(`${destination}/css`));
 	
 	cb();
@@ -67,4 +71,5 @@ function watcher(cb) {
 	cb();
 }
 
+exports.basic = series(parallel(html, css, js), watcher);
 exports.default = series(clean, parallel(html, css, js), server, watcher);

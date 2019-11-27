@@ -38,6 +38,13 @@ function css(cb) {
 	cb();
 }
 
+function icons(cb) {
+	src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+		.pipe(dest(`${destination}/css/webfonts`));
+	
+	cb();
+}
+
 function js(cb) {
 	src(`${origin}/js/lib/**/*.js`)
 		.pipe(dest(`${destination}/js/lib`));
@@ -71,5 +78,5 @@ function watcher(cb) {
 	cb();
 }
 
-exports.basic = series(parallel(html, css, js), watcher);
-exports.default = series(clean, parallel(html, css, js), server, watcher);
+exports.basic = series(parallel(html, icons, css, js), watcher);
+exports.default = series(clean, parallel(html, icons, css, js), server, watcher);

@@ -32,7 +32,7 @@ function css(cb) {
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 2 versions'],
 			cascade: false
-		})
+		}))
 		.pipe(dest(`${destination}/css`));
 	
 	cb();

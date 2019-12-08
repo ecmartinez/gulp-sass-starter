@@ -79,4 +79,5 @@ function watcher(cb) {
 }
 
 exports.basic = series(parallel(html, icons, css, js), watcher);
-exports.default = series(clean, parallel(html, icons, css, js), server, watcher);
+exports.test = series(clean, parallel(html, icons, css, js), server, watcher);
+exports.default = series(parallel(html, icons, css, js), server, watcher);

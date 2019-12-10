@@ -1,3 +1,14 @@
+/* Normalize.css */
 @import 'node_modules/normalize.css/normalize';
+/* GoogleFonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 $primary-font: 'Roboto', sans-serif;
+
+/* Fontawesome */
+$fa-font-path: '../../app/css/webfonts';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';

@@ -1,0 +1,5 @@
+@mixin media($width, $size) {
+	@media only screen and($width: $size) {
+		@content;
+	}
+}

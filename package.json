@@ -1,5 +1,5 @@
 {
-	"name": "starter-gulp",
+	"name": "gulp-sass-starter",
 	"version": "1.0.0",
 	"description": "",
 	"main": "gulpfile.js",
@@ -7,8 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "Edgar Martinez",
+	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.7.2",
 		"@babel/preset-env": "^7.7.1",		

@@ -25,7 +25,8 @@ function html(cb) {
 }
 
 function css(cb) {
-	src(`${origin}/scss/main.scss`)
+	// src(`${origin}/scss/main.scss`)
+	src(`${origin}/scss/**/main.scss`)
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
